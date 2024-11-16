@@ -2,8 +2,9 @@ output "ssm_vpc_id" {
   value = aws_ssm_parameter.vpc_id.id
 }
 
-
-
+output "azs" {
+  value = data.aws_availability_zones.available.names
+}
 output "ssm_vpc_cidr" {
   value = aws_ssm_parameter.vpc_cidr.id
 }
